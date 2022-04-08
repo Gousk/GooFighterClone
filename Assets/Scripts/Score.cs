@@ -21,7 +21,7 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        infoText = GameObject.Find("Info Text");
+        infoText = GameObject.Find("TMP2");
         player = GameObject.Find("Player");
         shooterS = player.GetComponent<Shooter>();
         levelText = GameObject.Find("TMP");

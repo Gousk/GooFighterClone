@@ -52,13 +52,15 @@ public class Shooter : MonoBehaviour
         for (int i = 0; i < destroyList.Count; i++)
         {
             coroutineActive = true;
-            //a.transform.position = Vector3.Lerp(gameObject.transform.position, destroyList[i].transform.position, 1f);
+            
             Vector3 spawnPos = new Vector3(transform.position.x,transform.position.y + 2f,transform.position.z);
             GameObject a = Instantiate(bulletPrefab, spawnPos, Quaternion.identity) as GameObject;
+
+            //a.transform.position = Vector3.Lerp(gameObject.transform.position, destroyList[i].transform.position, 0.3f);
             a.transform.DOMove(destroyList[i].gameObject.transform.position, 0.3f);
+
             yield return new WaitForSeconds(fireRate);
             coroutineActive = false;    
         }
-               
-    }
+    }                
 }
