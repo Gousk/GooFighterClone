@@ -27,26 +27,36 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
+        Vector3 minScale = new Vector3(5F,5F,1F);
+        Vector3 minusScale = new Vector3(0.5F,0.5F,0.2F);
+        Vector3 bossMinScale = new Vector3(7F,7F,3F);
+        
         if (other.tag == "DestroyedEnemy")
         {
             if (other.name == "Enemy")
             {
                 other.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                scoreS.score+=10;
+                Destroy(other.gameObject, 0f);
+                shooterS.destroyList.Remove(other.gameObject);
+                Destroy(gameObject, 0f);
             }
-            if (other.name == "Goo")
+            else if (other.name == "Goo")
             {
-
+                other.transform.localScale = minScale;
+                other.name = "Enemy";
             }
-            if (other.name == "Boss")
+            else if (other.name == "Boss")
             {
-
+                other.transform.localScale = other.transform.localScale - minusScale;
+                if (other.transform.localScale.x < bossMinScale.x)
+                {
+                    scoreS.score+=30;
+                    Destroy(other.gameObject, 0f);
+                    shooterS.destroyList.Remove(other.gameObject);
+                    Destroy(gameObject, 0f);    
+                }
             }
-
-            
-            scoreS.score+=10;
-            Destroy(other.gameObject, 0f);
-            shooterS.destroyList.Remove(other.gameObject);
-            Destroy(gameObject, 0f);
         }    
     }
 }

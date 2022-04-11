@@ -27,6 +27,6 @@ Material:
     - _Cutoff: 0.757
     - _Stroke: 0.938
     m_Colors:
-    - _Color: {r: 0.7924528, g: 0.2147216, b: 0.16820934, a: 1}
-    - _StrokeColor: {r: 1, g: 0.3863115, b: 0.3254717, a: 1}
+    - _Color: {r: 0.17007834, g: 0.9245283, b: 0.17681609, a: 1}
+    - _StrokeColor: {r: 0.23797476, g: 0.8207547, b: 0.15873085, a: 1}
   m_BuildTextureStacks: []

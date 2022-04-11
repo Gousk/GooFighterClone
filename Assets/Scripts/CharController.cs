@@ -48,9 +48,6 @@ public class CharController : MonoBehaviour
             {
                 charAnimator.SetBool("isWalking", false);
             }
-        }
-         
-
-          
+        }   
     }
 }
