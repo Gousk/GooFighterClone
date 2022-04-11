@@ -29,7 +29,20 @@ public class Bullet : MonoBehaviour
     {
         if (other.tag == "DestroyedEnemy")
         {
-            other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            if (other.name == "Enemy")
+            {
+                other.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            }
+            if (other.name == "Goo")
+            {
+
+            }
+            if (other.name == "Boss")
+            {
+
+            }
+
+            
             scoreS.score+=10;
             Destroy(other.gameObject, 0f);
             shooterS.destroyList.Remove(other.gameObject);
