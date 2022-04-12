@@ -18,7 +18,7 @@ public class EndCollider : MonoBehaviour
     }
 
     void LoadScene(){
-       SceneManager.LoadScene("SampleScene"); 
+       SceneManager.LoadScene("Level1"); 
     }
 
     private void OnTriggerEnter(Collider other) 

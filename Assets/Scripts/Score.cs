@@ -103,23 +103,23 @@ public class Score : MonoBehaviour
             upgrade = false;    
         }
 
+        // if (level == 8 && upgrade == false)
+        // {
+        //     upgrade = true;
+        //     shooterS.fireRate=0.2f;
+        //     //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Fire Rate");
+        //     upgrade = false;    
+        // }
+
+        // if (level == 9 && upgrade == false)
+        // {
+        //     upgrade = true;
+        //     bullet.GetComponent<SphereCollider>().radius=1.5f;
+        //     //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Bigger  Bullet Impact");
+        //     upgrade = false;    
+        // }
+
         if (level == 8 && upgrade == false)
-        {
-            upgrade = true;
-            shooterS.fireRate=0.2f;
-            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Fire Rate");
-            upgrade = false;    
-        }
-
-        if (level == 9 && upgrade == false)
-        {
-            upgrade = true;
-            bullet.GetComponent<SphereCollider>().radius=1.5f;
-            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Bigger  Bullet Impact");
-            upgrade = false;    
-        }
-
-        if (level == 10 && upgrade == false)
         {
             upgrade = true;
             //infoText.GetComponent<TextMeshProUGUI>().SetText("You Won");
