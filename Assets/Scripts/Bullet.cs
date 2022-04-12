@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
     {
         Vector3 minScale = new Vector3(5F,5F,1F);
         Vector3 minusScale = new Vector3(0.5F,0.5F,0.2F);
-        Vector3 bossMinScale = new Vector3(7F,7F,3F);
+        Vector3 bossMinScale = new Vector3(10F,10F,5F);
         
         if (other.tag == "DestroyedEnemy")
         {
