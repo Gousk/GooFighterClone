@@ -10,12 +10,6 @@ public class Shooter : MonoBehaviour
     public List <GameObject> destroyList = new List<GameObject>();
     public bool coroutineActive = false;
     public float fireRate = 0.9f;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-                           
-    }
 
     // Update is called once per frame
     void Update()

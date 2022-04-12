@@ -7,14 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
-    public float score = 0; 
+     
     Slider slider;
     GameObject levelText;
     GameObject infoText;
-    [SerializeField] GameObject spikedBall;
-    [SerializeField] GameObject bullet;
     GameObject player;
     Shooter shooterS;
+    //[SerializeField] GameObject spikedBall;
+    [SerializeField] GameObject bullet;
+    public float score = 0;
     float level = 1;
     int childCount;
 
@@ -134,6 +135,6 @@ public class Score : MonoBehaviour
     } 
 
     void LoadScene(){
-       SceneManager.LoadScene("SampleScene"); 
+       SceneManager.LoadScene("Level1"); 
     } 
 }

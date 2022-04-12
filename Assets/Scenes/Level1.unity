@@ -5745,9 +5745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521bf4a827c41d548971ea9dc0ba2155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 4410402538711483527, guid: aafb63bc043478a4c89ffc1b4f76051c, type: 3}
   score: 0
-  spikedBall: {fileID: 0}
-  bullet: {fileID: 0}
 --- !u!4 &496489104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1669509105533663680, guid: 34aca36a5430a134399905b25e1ccfaf, type: 3}
