@@ -26,6 +26,6 @@ public class Enemy : MonoBehaviour
 
         Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);   
+        //transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);   
     }
 }
