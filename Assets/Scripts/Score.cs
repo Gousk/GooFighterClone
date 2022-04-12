@@ -21,19 +21,19 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        infoText = GameObject.Find("TMP2");
+        //infoText = GameObject.Find("TMP2");
         player = GameObject.Find("Player");
         shooterS = player.GetComponent<Shooter>();
         levelText = GameObject.Find("TMP");
-        childCount = spikedBall.transform.childCount;
+        // childCount = spikedBall.transform.childCount;
 
-        spikedBall.GetComponent<Collider>().enabled = false;
-        for (int i = 0; i < childCount; i++)
-        {
-            spikedBall.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;    
-        } 
+        // spikedBall.GetComponent<Collider>().enabled = false;
+        // for (int i = 0; i < childCount; i++)
+        // {
+        //     spikedBall.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;    
+        // } 
 
-        infoText.GetComponent<TextMeshProUGUI>().SetText(" ");      
+        //infoText.GetComponent<TextMeshProUGUI>().SetText(" ");      
     }
 
     // Update is called once per frame
@@ -51,23 +51,23 @@ public class Score : MonoBehaviour
             levelText.GetComponent<TextMeshProUGUI>().SetText("Level "+level);
         }  
 
-        if (level == 2 && upgrade == false) 
-        {
-            upgrade = true;
-            spikedBall.GetComponent<Collider>().enabled = true;
-            for (int i = 0; i < childCount; i++)
-            {
-                spikedBall.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = true;    
-            } 
-            infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Spiked Ball"); 
-            upgrade = false; 
-        } 
+        // if (level == 2 && upgrade == false) 
+        // {
+        //     upgrade = true;
+        //     spikedBall.GetComponent<Collider>().enabled = true;
+        //     for (int i = 0; i < childCount; i++)
+        //     {
+        //         spikedBall.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = true;    
+        //     } 
+        //     infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Spiked Ball"); 
+        //     upgrade = false; 
+        // } 
 
         if (level == 3 && upgrade == false) 
         {
             upgrade = true;
             shooterS.fireRate=0.4f;
-            infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Fire Rate");
+            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Fire Rate");
             upgrade = false;    
         }
 
@@ -75,7 +75,7 @@ public class Score : MonoBehaviour
         {
             upgrade = true;
             player.GetComponent<SphereCollider>().radius=16;
-            infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Range");
+            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Range");
             upgrade = false;
         } 
 
@@ -83,7 +83,7 @@ public class Score : MonoBehaviour
         {
             upgrade = true;
             shooterS.fireRate=0.3f;
-            infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Fire Rate");
+            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Fire Rate");
             upgrade = false;    
         }
 
@@ -91,7 +91,7 @@ public class Score : MonoBehaviour
         {
             upgrade = true;
             bullet.GetComponent<SphereCollider>().radius = 1;
-            infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Bigger  Bullet Impact"); 
+            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Bigger  Bullet Impact"); 
             upgrade = false;   
         }
 
@@ -99,7 +99,7 @@ public class Score : MonoBehaviour
         {
             upgrade = true;
             player.GetComponent<SphereCollider>().radius = 20;
-            infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Range");
+            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Range");
             upgrade = false;    
         }
 
@@ -107,7 +107,7 @@ public class Score : MonoBehaviour
         {
             upgrade = true;
             shooterS.fireRate=0.2f;
-            infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Fire Rate");
+            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Fire Rate");
             upgrade = false;    
         }
 
@@ -115,14 +115,14 @@ public class Score : MonoBehaviour
         {
             upgrade = true;
             bullet.GetComponent<SphereCollider>().radius=1.5f;
-            infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Bigger  Bullet Impact");
+            //infoText.GetComponent<TextMeshProUGUI>().SetText("Upgrade  Bigger  Bullet Impact");
             upgrade = false;    
         }
 
         if (level == 10 && upgrade == false)
         {
             upgrade = true;
-            infoText.GetComponent<TextMeshProUGUI>().SetText("You Won");
+            //infoText.GetComponent<TextMeshProUGUI>().SetText("You Won");
             Invoke("LoadScene",2f);
             upgrade = false;    
         }
